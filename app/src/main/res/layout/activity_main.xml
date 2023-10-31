@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="317dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/graphic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rectangles"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Sunday, 19 May 2019 | 4:30PM"
+        android:textColor="#999999"
+        app:layout_constraintBottom_toBottomOf="@id/image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/location"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="#C4C4C4"
+        android:text="Mumbai, India"
+        android:textColor="#0DA0EA"
+        app:layout_constraintEnd_toEndOf="@id/rectangles"
+        app:layout_constraintTop_toTopOf="@id/rectangles" />
+
+    <ImageView
+        android:id="@+id/iv_vector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:src="@drawable/vector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/text_sunny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="7dp"
+        android:text="Sunny"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_vector" />
+
+    <TextView
+        android:id="@+id/text_33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="30dp"
+        android:text="33"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintStart_toEndOf="@id/iv_vector"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/text_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="°C"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/text_33"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+    <TextView
+        android:id="@+id/text_temperature_number_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="35dp"
+        android:text="35°C↑"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/text_temperature"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+    <TextView
+        android:id="@+id/text_temperature_number_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:text="27°C↓"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/text_temperature"
+        app:layout_constraintTop_toBottomOf="@id/text_temperature_number_one" />
+
+    <ImageView
+        android:id="@+id/iv_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_sunny" />
+
+    <TextView
+        android:id="@+id/text_49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="5dp"
+        android:text="49%"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_humidity" />
+
+    <TextView
+        android:id="@+id/text_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:text="humidity"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_49" />
+
+    <TextView
+        android:id="@+id/text_1.007"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="40dp"
+        android:text="1,007mBar"
+        app:layout_constraintStart_toEndOf="@id/iv_humidity"
+        app:layout_constraintTop_toBottomOf="@id/text_33" />
+
+    <TextView
+        android:id="@+id/text_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:text="Pressure"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/text_humidity"
+        app:layout_constraintTop_toBottomOf="@id/text_1.007" />
+
+    <ImageView
+        android:id="@+id/iv_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/wind"
+        app:layout_constraintStart_toEndOf="@id/text_1.007"
+        app:layout_constraintTop_toBottomOf="@id/text_temperature_number_two" />
+
+    <TextView
+        android:id="@+id/snjncd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="5dp"
+        android:text="23 km/h"
+        app:layout_constraintStart_toEndOf="@id/text_pressure"
+        app:layout_constraintTop_toBottomOf="@id/iv_wind" />
+
+    <TextView
+        android:id="@+id/text_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="Wind"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/text_pressure"
+        app:layout_constraintTop_toBottomOf="@id/snjncd" />
+
+    <ImageView
+        android:id="@+id/iv_sunrise"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/sunset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_humidity" />
+
+    <TextView
+        android:id="@+id/text_time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:text="6:03AM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_sunrise" />
+
+    <TextView
+        android:id="@+id/text_sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Sunrise"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_time1" />
+
+    <ImageView
+        android:id="@+id/iv_sunset"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/sunrise"
+        app:layout_constraintStart_toEndOf="@id/iv_sunrise"
+        app:layout_constraintTop_toBottomOf="@id/text_pressure" />
+
+    <TextView
+        android:id="@+id/text_time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:text="7:05 PM"
+        app:layout_constraintStart_toEndOf="@id/text_time1"
+        app:layout_constraintTop_toBottomOf="@id/iv_sunset" />
+
+    <TextView
+        android:id="@+id/text_sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:text="Sunset"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/text_sunrise"
+        app:layout_constraintTop_toBottomOf="@id/text_time2" />
+
+    <ImageView
+        android:id="@+id/iv_clock"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/clock"
+        app:layout_constraintStart_toEndOf="@id/iv_sunset"
+        app:layout_constraintTop_toBottomOf="@id/text_wind" />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:text="13h 1m"
+        app:layout_constraintStart_toEndOf="@id/text_time2"
+        app:layout_constraintTop_toBottomOf="@id/iv_clock" />
+
+    <TextView
+        android:id="@+id/text_daytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:text="Daytime"
+        android:textColor="#999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/text_sunset"
+        app:layout_constraintTop_toBottomOf="@id/text_time" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_number_one"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="11dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_sunrise">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/sunny" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Mon,21" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="35°C↑  26°C↓"
+            android:textSize="8sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_number_two"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="11dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@id/cv_number_one"
+        app:layout_constraintTop_toBottomOf="@id/text_sunset">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/cloudy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Tue, 22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="35°C↑  27°C↓"
+            android:textSize="8sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_number_three"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="11dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@id/cv_number_two"
+        app:layout_constraintTop_toBottomOf="@id/text_daytime">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/hazy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Wed, 22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="34°C↑  29°C↓"
+            android:textSize="8sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
